@@ -113,3 +113,85 @@ header {
 }
 
 /* ------ HABITACIONES ------ */
+
+.contenedor-habitaciones {
+    width: 80%;
+    height: 90vh;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.habitaciones-info {
+    width: 50%;
+    align-self: center;
+}
+
+.info-menu {
+    width: 75%;
+    margin-bottom: 15px;
+}
+
+.info-nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-bottom: #000 solid 1px;
+}
+
+.info-nav ul li {
+    list-style: none;
+    padding-right: 20px;
+}
+
+.info-nav ul li a {
+    color: black;
+    text-decoration: none;
+    border-right: #000 solid 1px;
+    padding: 0 20px 0 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#no-border {
+    border-right: #000 solid 0px;
+}
+
+.info {
+    width: 75%;
+}
+
+.info h3 {
+    font-size: 4em;
+    line-height: .9em;
+}
+
+.info p {
+    font-size: 1.1em;
+}
+
+.vip, .fotos-vip {
+    display: none;
+}
+
+.premium, .fotos-premium {
+    display: none;
+}
+
+.habitaciones-fotos {
+    width: 50%;
+    height: 90%;
+    align-self: center;
+}
+
+.fotos-normal {
+    width: 90%;
+    height: 100%;
+    background: url("../img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg");
+    background-size: cover;
+}
+
+
+
+
+
