@@ -222,6 +222,73 @@ header {
 }
 
 
+/* ------ CONTACTO ------ */
+
+.contacto {
+    width: 100%;
+    height: 65vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contacto-form {
+    width: 45%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contacto-form h3 {
+    font-size: 1.8em;
+}
+
+.contacto-form p {
+    color: grey;
+}
+
+.contacto-form input {
+    width: 60%;
+    outline: 0;
+    border: 0px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.contacto-form textarea {
+    width: 60%;
+    outline: 0;
+    border: 0px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.contacto-form input[type="submit"] {
+    width: 40%;
+    outline: 0;
+    border: 0px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+
+
+.contacto-mapa {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(129, 205, 255);
+}
+
+
 
 
 
