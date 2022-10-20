@@ -191,6 +191,10 @@ header {
     background-size: cover;
 }
 
+
+/* ------ INFO PERSONAL ------ */
+
+
 .personal-info {
     width: 100%;
     height: 35vh;
@@ -266,6 +270,7 @@ header {
     padding: 10px;
     margin: 10px 0;
     font-size: 1em;
+    resize: none;
 }
 
 .contacto-form input[type="submit"] {
@@ -289,6 +294,35 @@ header {
 }
 
 
+/* ------ COTIZAR ESTADIA ------ */
+
+.cotizar {
+    width: 100%;
+    height: 35vh;
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: cemter;
+}
+
+.cotizar-info {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cotizar-info h3 {
+    font-size: 1.8em;
+}
+
+.cotizar-info p {
+    margin: 15px 0;
+}
+
+.estadia-cotizar {
+    margin: 15px auto;
+}
 
 
 
