@@ -145,7 +145,7 @@ header {
 }
 
 .info-nav ul li a {
-    color: black;
+    color: #000;
     text-decoration: none;
     border-right: #000 solid 1px;
     padding: 0 20px 0 0;
@@ -322,6 +322,92 @@ header {
 
 .estadia-cotizar {
     margin: 15px auto;
+}
+
+
+/* ------ FOOTER ------ */
+
+
+footer {
+    width: 100%;
+    background-color: #000;
+    color: grey;
+}
+
+.footer-container {
+    width: 80%;
+    height: 25vh;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.footer-container h4 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+.nav-footer-1 {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    border-right: grey solid 1px;
+}
+
+.nav-footer-1 ul {
+    list-style: none;
+}
+
+.nav-footer-1 ul li {
+    margin: 15px 0;
+}
+
+.nav-footer-1 ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.nav-footer-2 {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-right: grey solid 1px;
+}
+
+.nav-footer-2 ul {
+    list-style: none;
+}
+
+.nav-footer-2 ul li {
+    margin: 15px 0;
+}
+
+.nav-footer-2 ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.footer-info {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    border-right: grey solid 1px;
+}
+
+.footer-info  p{
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-copy {
+    grid-column: 4 / 5;
+    grid-row: 1;
 }
 
 
