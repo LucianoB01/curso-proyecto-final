@@ -20,40 +20,112 @@ const btnSliderUno = document.getElementsByClassName("material-symbols-outlined"
 btnSliderUno.addEventListener("click", headerSlider);
 */
 
+// ---------- HEADER SLIDER ----------
+
 const fotos = document.getElementsByClassName("slider-foto");
 const botones = document.querySelectorAll(".material-symbols-outlined");
 
-
 const headerSlider = (event) => {
 
-    //console.log(event.target.parentElement);
-
-    //console.log(fotos);
-
-    //const elementIndex = event.path[1];
-
-    //fotos[elementIndex].style.display = "block";
+    const slider = document.getElementById("slider-foto-1");
 
     for(let foto of fotos){
-        //console.log(foto.getAttribute("id"));
-        //console.log(event.target.parentElement.getAttribute("id"));
         if(foto.getAttribute("id") == event.target.parentElement.getAttribute("id")){
-            foto.style.display = "block"; 
+            //foto.style.display = "block"; 
+
+            //console.log(foto.id);
+
+            switch(foto.getAttribute("id")){
+                case "foto-1":
+                    botones[0].innerHTML = "radio_button_checked";
+                    botones[1].innerHTML = "radio_button_unchecked";
+                    botones[2].innerHTML = "radio_button_unchecked";
+                    botones[3].innerHTML = "radio_button_unchecked";
+                    slider.classList.add("slide-1");
+                    slider.classList.remove("slide-2");
+                    slider.classList.remove("slide-3"); 
+                    slider.classList.remove("slide-4");
+                    break;
+                case "foto-2":
+                    botones[0].innerHTML = "radio_button_unchecked";
+                    botones[1].innerHTML = "radio_button_checked";
+                    botones[2].innerHTML = "radio_button_unchecked";
+                    botones[3].innerHTML = "radio_button_unchecked";
+                    slider.classList.add("slide-2");
+                    slider.classList.remove("slide-1");
+                    slider.classList.remove("slide-3"); 
+                    slider.classList.remove("slide-4");
+                    break;
+                case "foto-3":
+                    botones[0].innerHTML = "radio_button_unchecked";
+                    botones[1].innerHTML = "radio_button_unchecked";
+                    botones[2].innerHTML = "radio_button_checked";
+                    botones[3].innerHTML = "radio_button_unchecked";
+                    slider.classList.add("slide-3");
+                    slider.classList.remove("slide-1");
+                    slider.classList.remove("slide-2"); 
+                    slider.classList.remove("slide-4");
+                    break;
+                case "foto-4":
+                    botones[0].innerHTML = "radio_button_unchecked";
+                    botones[1].innerHTML = "radio_button_unchecked";
+                    botones[2].innerHTML = "radio_button_unchecked";
+                    botones[3].innerHTML = "radio_button_checked";
+                    slider.classList.add("slide-4");
+                    slider.classList.remove("slide-1");
+                    slider.classList.remove("slide-2"); 
+                    slider.classList.remove("slide-3");
+                    break;
+            }
         } else {
-            foto.style.display = "none"; 
+            //slider.classList.remove("slide-2");
+            //foto.style.display = "none"; 
         }
     }
 
-    /*for(let foto of fotos){
-        if(fotos.indexOf(foto) === elementIndex){
-            continue;
-        }
-
-        foto.style.display = "none"; 
-    }*/
-    
 }
 
 botones.forEach( boton => {
     boton.addEventListener("click", headerSlider);
 });
+
+
+
+
+// ---------- HABITACIONES ----------
+
+const habitacionesBtns = document.querySelectorAll(".info-nav ul li");
+
+const habitacionesMenu = (boton) => {
+    const habitacionesInfo = document.querySelectorAll(".info"),
+    habitacionesFotos = document.querySelectorAll(".fotos");
+    let botonesOcultar = [], ocultar = [], ocultarFotos = []; 
+    let botonesMostar, mostrar, mostrarFotos; 
+
+    for(let i=0;i<habitacionesBtns.length;i++){
+        if(habitacionesBtns[i] != boton.path[0]){
+            ocultar.push(habitacionesInfo[i]);
+            ocultarFotos.push(habitacionesFotos[i]);
+            botonesOcultar.push(habitacionesBtns[i]);
+        } else {
+            mostrar = habitacionesInfo[i]; 
+            mostrarFotos = habitacionesFotos[i];
+            botonesMostar = habitacionesBtns[i];
+        } 
+    } 
+
+    for(let i=0;i < ocultar.length;i++){
+        ocultar[i].style.display = "none";
+        ocultarFotos[i].style.display = "none"; 
+        botonesOcultar[i].style.color = "grey";
+    }
+
+    mostrar.style.display = "block";
+    mostrarFotos.style.display = "block";
+    botonesMostar.style.color = "#000";
+} 
+
+habitacionesBtns.forEach( boton => {
+    boton.addEventListener("click", habitacionesMenu);
+});
+

@@ -67,9 +67,9 @@
             <div class="info-menu">
                 <nav class="info-nav">
                     <ul>
-                        <li><a href="">Suite</a></li>
-                        <li><a href="">VIP</a></li>
-                        <li><a id="no-border" href="">Premium</a></li>
+                        <li>Suite</li>
+                        <li>VIP</li>
+                        <li id="no-border">Premium</li>
                     </ul>
                 </nav>
             </div>
@@ -111,14 +111,14 @@
             </div>
         </div>
         <div class="habitaciones-fotos">
-            <div class="fotos-normal">
+            <div class="fotos foto-normal">
                 <!--<img src="img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg" alt="">-->
             </div>
-            <div class="fotos-vip">
-                <img src="img/Camera-Deluxe-scaled.jpg" alt="">
+            <div class="fotos foto-vip">
+                <!--<img src="img/Camera-Deluxe-scaled.jpg" alt="">-->
             </div>
-            <div class="fotos-premium">
-                <img src="img/2021-09-17_de_len_0196-scaled.jpg" alt="">
+            <div class="fotos foto-premium">
+                <!--<img src="img/2021-09-17_de_len_0196-scaled.jpg" alt="">-->
             </div>
         </div>
     </section>
@@ -148,12 +148,13 @@
         <div class="contacto-form">
             <h3>Contacto</h3>
             <p>Ponete en contacto con nosotros</p>
-            <form action="GET">
+            <form action="#" method="post" name="fomularioContacto" id="formularioContacto">
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre">
                 <input type="email" name="email" id="email" placeholder="Correo electronico">
                 <textarea name="" id="" cols="30" rows="4" placeholder="Mensaje"></textarea>
                 <input type="submit" value="Enviar">
             </form>
+            <div id="resultadoValidacion"></div>
         </div>
         <div class="contacto-mapa">
 
@@ -217,5 +218,31 @@
 
     <!-- JAVASCRIPT -->
     <script src="./js/javascript.js"></script>
+    <!-- VALIDATE JS -->
+    <script type="text/javascript" src="js/validate.min.js"></script>
+    <script type="text/javascript">
+
+        let validator = new FormValidator('formularioContacto', [{
+            name: 'nombre',
+            display: 'Nombre',
+            rules: 'required|min_length[5]'
+        },
+        {
+            name: 'email',
+            display: 'Email',
+            rules: 'required | valid_email' 
+        }], function(errores, evento){
+            if(errores.length > 0){
+                let mensaje = "";
+            
+                errores.forEach(function(campo, indice, arreglo){
+                    mensaje += campo.message + '<br/>';
+                });
+
+                document.querySelector("#resultadoValidacion").innerHTML = mensaje;
+            }
+        });
+
+    </script>
 </body>
 </html>

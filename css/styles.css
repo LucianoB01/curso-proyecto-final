@@ -135,6 +135,33 @@ header {
     text-align: center;
 }
 
+/* ------ MENU ANIMACIONES ------ */
+
+.btn-active {
+    color: white;
+}
+
+.slide-1 {
+    transform: translateX(0%);
+    transition: transform 1s ease;
+}
+
+.slide-2 {
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+}
+
+.slide-3 {
+    transform: translateX(-200%);
+    transition: transform 1s ease;
+}
+
+.slide-4 {
+    transform: translateX(-300%);
+    transition: transform 1s ease;
+}
+
+
 /* ------ HABITACIONES ------ */
 
 .contenedor-habitaciones {
@@ -164,16 +191,20 @@ header {
 
 .info-nav ul li {
     list-style: none;
-    padding-right: 20px;
-}
-
-.info-nav ul li a {
-    color: #000;
+    padding: 0 20px;
+    color: grey;
     text-decoration: none;
     border-right: #000 solid 1px;
-    padding: 0 20px 0 0;
     font-size: 1.5em;
     font-weight: 700;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.info-nav ul li:nth-child(1){
+    padding-left: 0px;
+    margin-left: 0px;
+    color: #000;
 }
 
 #no-border {
@@ -193,11 +224,11 @@ header {
     font-size: 1.1em;
 }
 
-.vip, .fotos-vip {
+.vip, .foto-vip {
     display: none;
 }
 
-.premium, .fotos-premium {
+.premium, .foto-premium {
     display: none;
 }
 
@@ -207,12 +238,29 @@ header {
     align-self: center;
 }
 
-.fotos-normal {
+.fotos {
     width: 90%;
     height: 100%;
+}
+
+.foto-normal {
     background: url("../img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg");
     background-size: cover;
 }
+
+.foto-vip {
+    background: url("../img/Camera-Deluxe-scaled.jpg");
+    background-size: cover;
+}
+
+
+.foto-premium {
+    background: url("../img/2021-09-17_de_len_0196-scaled.jpg");
+    background-size: cover;
+}
+
+
+
 
 
 /* ------ INFO PERSONAL ------ */
