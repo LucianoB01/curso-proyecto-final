@@ -53,9 +53,7 @@
         <div class="header-info">
             <h1>Frase del hotel</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Voluptas rem facere atque eos! Quasi consectetur porro soluta 
-                quas eaque ea sequi voluptatum iste expedita quam? Repellat 
-                eos earum reprehenderit porro.</p>
+                Voluptas rem facere atque eos!</p>
                 <div class="cotizar-btn">
                     <p>Reservar</p>
                 </div>
@@ -151,13 +149,13 @@
             <form action="#" method="post" name="fomularioContacto" id="formularioContacto">
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre">
                 <input type="email" name="email" id="email" placeholder="Correo electronico">
-                <textarea name="" id="" cols="30" rows="4" placeholder="Mensaje"></textarea>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="4" placeholder="Mensaje"></textarea>
                 <input type="submit" value="Enviar">
             </form>
             <div id="resultadoValidacion"></div>
         </div>
         <div class="contacto-mapa">
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.44836111074!2d12.132078017443847!3d46.538816799999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778343079c5de39%3A0x96a4952194b855b9!2sHOTEL%20de%20L%C3%8BN!5e0!3m2!1ses-419!2sar!4v1666705728521!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -230,18 +228,32 @@
         {
             name: 'email',
             display: 'Email',
-            rules: 'required | valid_email' 
+            rules: 'required|valid_email' 
+        },
+        {
+            name: 'mensaje',
+            display: 'Mensaje',
+            rules: 'required|min_length[10]|max_length[120]'
         }], function(errores, evento){
             if(errores.length > 0){
                 let mensaje = "";
             
                 errores.forEach(function(campo, indice, arreglo){
-                    mensaje += campo.message + '<br/>';
+                    mensaje += "<li>" + campo.message + "</li>";
                 });
+
+                document.querySelector("#resultadoValidacion").style.padding = "10px";
+
+                console.log(mensaje);
 
                 document.querySelector("#resultadoValidacion").innerHTML = mensaje;
             }
         });
+
+        validator.setMessage('min_length', '%s debe tener como minimo 5 caracteres');
+        validator.setMessage('max_length', '%s debe tener como maximo 120 caracteres');
+        validator.setMessage('valid_email', '%s no es un correo electronico valido');
+        validator.setMessage('required', 'El campo %s es obligatorio');
 
     </script>
 </body>
