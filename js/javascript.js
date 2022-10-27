@@ -20,10 +20,34 @@ const btnSliderUno = document.getElementsByClassName("material-symbols-outlined"
 btnSliderUno.addEventListener("click", headerSlider);
 */
 
+// ---------- MENU MOBILE ----------
+
+const menuBtn = document.querySelector("#menu-btn"); 
+const menuBtnClose = document.querySelector("#menu-close"); 
+const menu = document.querySelector("#mobile-menu-js"); 
+
+menuBtn.onclick = function(){
+    menu.classList.toggle("show");
+};
+
+menuBtnClose.onclick = function(){
+    menu.classList.remove("show");
+};
+
+/*
+
+const menuMobile = () => {
+
+}
+
+menuBtn.addEventListener("click", menuMobile);
+
+*/
+
 // ---------- HEADER SLIDER ----------
 
 const fotos = document.getElementsByClassName("slider-foto");
-const botones = document.querySelectorAll(".material-symbols-outlined");
+const botones = document.querySelectorAll(".radio-btn");
 
 const headerSlider = (event) => {
 

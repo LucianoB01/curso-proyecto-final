@@ -20,6 +20,20 @@
 <body>
 
     <header>
+        <div class="mobile-menu" id="mobile-menu-js">
+            <div class="menu-close" id="menu-close">
+                <span class="material-symbols-outlined">close</span> 
+            </div>
+            <nav class="mobile-nav" id="mobile-menu">
+                <ul>
+                    <li id="menu-title">Menu</li>
+                    <hr>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Contacto</a></li>
+                    <li ><a href="">Cotizar</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="slider">
             <ul id="slider-foto-1">
                 <li class="slider-foto" id="foto-1"><img src="./img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg" alt=""></li>
@@ -31,10 +45,10 @@
         <div class="slider-puntos">
             <nav class="slider-nav">
                 <ul>
-                    <li id="foto-1"><span class="material-symbols-outlined">radio_button_checked</span></li>
-                    <li id="foto-2"><span class="material-symbols-outlined">radio_button_unchecked</span></li>
-                    <li id="foto-3"><span class="material-symbols-outlined">radio_button_unchecked</span></li>
-                    <li id="foto-4"><span class="material-symbols-outlined">radio_button_unchecked</span></li>
+                    <li id="foto-1"><span class="material-symbols-outlined radio-btn">radio_button_checked</span></li>
+                    <li id="foto-2"><span class="material-symbols-outlined radio-btn">radio_button_unchecked</span></li>
+                    <li id="foto-3"><span class="material-symbols-outlined radio-btn">radio_button_unchecked</span></li>
+                    <li id="foto-4"><span class="material-symbols-outlined radio-btn">radio_button_unchecked</span></li>
                 </ul>
             </nav>
         </div>
@@ -49,14 +63,17 @@
                     <li id="nav-cotizar"><a href="">Cotizar</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-logo" id="menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
         </div>
         <div class="header-info">
             <h1>Frase del hotel</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Voluptas rem facere atque eos!</p>
-                <div class="cotizar-btn">
-                    <p>Reservar</p>
-                </div>
+            <div class="cotizar-btn">
+                <p>Reservar</p>
+            </div>
         </div>
     </header>
 

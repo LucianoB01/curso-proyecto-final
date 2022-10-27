@@ -20,7 +20,69 @@ header {
     background-position: 25% 100%;
 }
 
+/* ------ MOBILE MENU ------ */
+
+.mobile-menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: 45%;
+    height: 100vh;
+    z-index: 10;
+    transform: translateX(-500px);
+    transition: transform 0.2s ease;
+}
+
+.show {
+    transition: transform 0.2s ease;
+    transform: translateX(0px);
+}
+
+.mobile-menu span {
+    margin-top: 10%;
+    margin-left: 10%;
+    color: white;
+}
+
+.mobile-nav {
+    margin: 50% 0 0 10%;
+
+}
+
+#menu-title {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    padding: 10px 10px 10px 0;
+}
+
+.mobile-nav hr {
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.mobile-nav ul li a {
+    margin-left: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-menu-logo {
+    display: none;
+}
+
 /* ------ SLIDER ------ */
+
+.puntos-mobile {
+    display: none;
+}
 
 .slider {
     width: 100%;
@@ -31,6 +93,7 @@ header {
 }
 
 .slider ul {
+    height: 100%;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -40,8 +103,13 @@ header {
     width: 100%;
 }
 
+/*#foto-1 {
+    background: url("../img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg");
+}*/
+
 .slider ul li img {
     width: 100vw;
+    height: 100%;
     background-size: cover;
 }
 
@@ -443,6 +511,7 @@ footer {
     grid-column: 1 / 2;
     grid-row: 1;
     border-right: grey solid 1px;
+    padding: 0 10px;
 }
 
 .nav-footer-1 ul {
@@ -462,6 +531,7 @@ footer {
     grid-column: 2 / 3;
     grid-row: 1;
     border-right: grey solid 1px;
+    padding: 0 10px;
 }
 
 .nav-footer-2 ul {
@@ -481,6 +551,7 @@ footer {
     grid-column: 3 / 4;
     grid-row: 1;
     border-right: grey solid 1px;
+    padding: 0 10px;
 }
 
 .footer-info  p{
@@ -496,6 +567,7 @@ footer {
 .footer-copy {
     grid-column: 4 / 5;
     grid-row: 1;
+    padding: 0 10px;
 }
 
 
@@ -512,7 +584,17 @@ footer {
         height: 70vh;
     }
 
+    /* ------ MENU MOBILE ------ */
+
+    .mobile-menu-logo {
+        display: block;
+    }
+
     /* ------ SLIDER ------ */
+
+    .slider ul {
+        height: 80%;
+    }
 
     .slider-puntos {
         top: 56%;
@@ -668,10 +750,16 @@ footer {
 }
 
 
-@media (min-width: 376px) and (max-width: 425px) {
+@media (min-width: 376px) and (max-width: 768px) {
 
     header {
         height: 90vh;
+    }
+
+    /* ------ MENU MOBILE ------ */
+
+    .mobile-menu-logo {
+        display: block;
     }
 
     /* ------ SLIDER ------ */
@@ -825,5 +913,38 @@ footer {
     }
     
     
+
+}
+
+@media (min-width: 490px) and (max-width: 768px) {
+
+    .personal-info {
+        height: 50vh;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .habitaciones-info {
+        font-size: 12px;
+    }
+
+    .habitaciones-fotos {
+        height: 80%;
+    }
+
+    .personal-info {
+        height: 45vh;
+    }
+
+    .cotizar {
+        height: 45vh;
+    }
+
+    .footer-container {
+        height: 35vh;
+    }
+
 
 }
