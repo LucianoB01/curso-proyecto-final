@@ -1,25 +1,3 @@
-/*const headerSlider = () => {
-    const header = document.getElementById("slider-foto-1");
-
-    const fotoUno = document.getElementById("foto-1");
-    const fotoDos = document.getElementById("foto-2");
-    const fotoTres = document.getElementById("foto-3");
-    const fotoCuatro = document.getElementById("foto-4");
-
-    fotoDos.style.display = "block";
-
-    fotoUno.style.display = "none";
-    fotoTres.style.display = "none";
-    fotoCuatro.style.display = "none";
-
-    //header.style.transform="translatex(-100%)";
-}
-
-const btnSliderUno = document.getElementsByClassName("material-symbols-outlined")[0];
-
-btnSliderUno.addEventListener("click", headerSlider);
-*/
-
 // ---------- MENU MOBILE ----------
 
 const menuBtn = document.querySelector("#menu-btn"); 
@@ -34,16 +12,6 @@ menuBtnClose.onclick = function(){
     menu.classList.remove("show");
 };
 
-/*
-
-const menuMobile = () => {
-
-}
-
-menuBtn.addEventListener("click", menuMobile);
-
-*/
-
 // ---------- HEADER SLIDER ----------
 
 const fotos = document.getElementsByClassName("slider-foto");
@@ -55,9 +23,6 @@ const headerSlider = (event) => {
 
     for(let foto of fotos){
         if(foto.getAttribute("id") == event.target.parentElement.getAttribute("id")){
-            //foto.style.display = "block"; 
-
-            //console.log(foto.id);
 
             switch(foto.getAttribute("id")){
                 case "foto-1":
@@ -102,8 +67,7 @@ const headerSlider = (event) => {
                     break;
             }
         } else {
-            //slider.classList.remove("slide-2");
-            //foto.style.display = "none"; 
+            
         }
     }
 

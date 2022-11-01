@@ -15,11 +15,11 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>Inicio | Hotel de LEN</title>
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <div class="mobile-menu" id="mobile-menu-js">
             <div class="menu-close" id="menu-close">
                 <span class="material-symbols-outlined">close</span> 
@@ -28,18 +28,20 @@
                 <ul>
                     <li id="menu-title">Menu</li>
                     <hr>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Contacto</a></li>
-                    <li ><a href="">Cotizar</a></li>
+                    <li><a href="#header">Inicio</a></li>
+                    <li><a href="#habitaciones">Habitaciones</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li ><a href="#cotizar">Reservar</a></li>
                 </ul>
             </nav>
         </div>
         <div class="slider">
             <ul id="slider-foto-1">
-                <li class="slider-foto" id="foto-1"><img src="./img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg" alt=""></li>
-                <li class="slider-foto" id="foto-2"><img src="./img/Camera-Deluxe-scaled.jpg" alt=""></li>
-                <li class="slider-foto" id="foto-3"><img src="./img/Hotel-de-Len_-Photo-Helenio-Barbetta-12-scaled.jpg" alt=""></li>
-                <li class="slider-foto" id="foto-4"><img src="./img/2021-09-17_de_len_0196-scaled.jpg" alt=""></li>
+                <li class="slider-foto bg-uno" id="foto-1"><img src="./img/Hotel-de-Len_-Photo-Helenio-Barbetta-10-scaled.jpg" alt=""></li>
+                <li class="slider-foto bg-dos" id="foto-2"><img src="./img/Camera-Deluxe-scaled.jpg" alt=""></li>
+                <li class="slider-foto bg-tres" id="foto-3"><img src="./img/Hotel-de-Len_-Photo-Helenio-Barbetta-12-scaled.jpg" alt=""></li>
+                <li class="slider-foto bg-cuatro" id="foto-4"><img src="./img/2021-09-17_de_len_0196-scaled.jpg" alt=""></li>
             </ul>
         </div>
         <div class="slider-puntos">
@@ -58,9 +60,11 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Contacto</a></li>
-                    <li id="nav-cotizar"><a href="">Cotizar</a></li>
+                    <li><a href="#header">Inicio</a></li>
+                    <li><a href="#habitaciones">Habitaciones</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li id="nav-cotizar"><a href="#cotizar">Reservar</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu-logo" id="menu-btn">
@@ -68,16 +72,15 @@
             </div>
         </div>
         <div class="header-info">
-            <h1>Frase del hotel</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Voluptas rem facere atque eos!</p>
+            <h1>Hotel de LEN</h1>
+            <p>The story of a territory, starting with its raw materials, inspired by nature and coming back to the essentials.</p>
             <div class="cotizar-btn">
-                <p>Reservar</p>
+                <p><a href="./reservar/index.html">Reservar</a></p>
             </div>
         </div>
     </header>
 
-    <section class="contenedor-habitaciones">
+    <section class="contenedor-habitaciones" id="habitaciones">
         <div class="habitaciones-info">
             <div class="info-menu">
                 <nav class="info-nav">
@@ -88,40 +91,29 @@
                     </ul>
                 </nav>
             </div>
-            <div class="info normal">
-                <h3>Habitacion Suite</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Nulla labore modi veritatis. Sint eos distinctio itaque 
-                    possimus, dolore reiciendis voluptates quas doloribus quis, 
-                    veritatis sunt consequatur nobis eveniet perspiciatis 
-                    expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Nulla labore modi veritatis.</p>
+            <div class="info normal" id="normal">
+                <h3>Habitación Suite</h3>
+                <p>The rooms, with simple lines and modern design, tell of the close link between spaces, colors, light, materials, ergonomics and well-being of the mind.
+
+                The main material is wood: pine, known for improving the quality of sleep. Natural properties contribute to the improvement of psychophysical balance. Room in Stone Pine with views on to the internal street. Bathroom with shower.
+                    
+                Features: WIFI, TV, AC, Minibar, Telephone, Safe, Hairdryer.</p>
                 <div class="cotizar-btn">
-                    <p>Reservar</p>
+                    <p><a href="./reservar/index.html">Reservar</a></p>
                 </div>
             </div>
-            <div class="info vip">
-                <h3>Habitacion VIP</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Nulla labore modi veritatis. Sint eos distinctio itaque 
-                    possimus, dolore reiciendis voluptates quas doloribus quis, 
-                    veritatis sunt consequatur nobis eveniet perspiciatis 
-                    expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Nulla labore modi veritatis.</p>
+            <div class="info vip" id="premium">
+                <h3>Habitación VIP</h3>
+                <p>The main material is wood: pine, known for improving the quality of sleep. Natural properties contribute to the improvement of psychophysical balance. Room in Stone Pine with views on to the internal street. Bathroom with shower. Room in fir with a terrace ranging from 5 to 11 square metres with uninterrupted views over the typical Ampezzane houses in the centre of Cortina d’Ampezzo, small living area (with coffee table, armchair and footstool). Bathroom with shower or, bathtub and shower. Features: WIFI, TV, AC, Minibar, Telephone, Safe, Hairdryer.</p>
                 <div class="cotizar-btn">
-                    <p>Reservar</p>
+                    <p><a href="./reservar/index.html">Reservar</a></p>
                 </div>
             </div>
-            <div class="info premium">
-                <h3>Habitacion Premium</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Nulla labore modi veritatis. Sint eos distinctio itaque 
-                    possimus, dolore reiciendis voluptates quas doloribus quis, 
-                    veritatis sunt consequatur nobis eveniet perspiciatis 
-                    expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Nulla labore modi veritatis.</p>
+            <div class="info premium" id="vip">
+                <h3>Habitación Premium</h3>
+                <p>The rooms, with simple lines and modern design, tell of the close link between spaces, colors, light, materials, ergonomics and well-being of the mind.Room in fir with a 9 to 10 square metre terrace, facing on to Via Cesare Battisti, one the main streets in Cortina d’Amezzo and views of the mountain ranges of Tofane and Cinque Torri. The room has a small living area (with a coffee table, armchair and footstool) and a wardrobe. Natural light in the bathroom and shower. Features: WIFI, TV, AC, Minibar, Telephone, Safe, Hairdryer.</p>
                 <div class="cotizar-btn">
-                    <p>Reservar</p>
+                    <p><a href="./reservar/index.html">Reservar</a></p>
                 </div>
             </div>
         </div>
@@ -138,28 +130,17 @@
         </div>
     </section>
 
-    <section class="personal-info">
+    <section class="personal-info" id="sobre-mi">
         <div class="info-foto">
             <img src="" alt="">
         </div>
         <div class="info-texto">
             <h3>Luciano buceta</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Quo consequuntur, cumque ea, id provident officia optio, 
-                sint quaerat facere veritatis animi in sunt facilis atque 
-                exercitationem laborum reprehenderit? Deleniti, corporis?
-                Quo consequuntur, cumque ea, id provident officia optio, 
-                sint quaerat facere veritatis animi in sunt facilis atque 
-                exercitationem laborum reprehenderit? Deleniti, corporis?
-                Sint eos distinctio itaque 
-                possimus, dolore reiciendis voluptates quas doloribus quis, 
-                veritatis sunt consequatur nobis eveniet perspiciatis 
-                expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Nulla labore modi veritatis.</p>
+            <p>Más de tres años de experiencia trabajando como Diseñador de redes sociales freelancer, principalmente en organizaciones de e-sports extranjeras. Amplio conocimiento de herramientas de diseño como Adobe Photoshop y Adobe After Effects. Manejo de Ingles nivel intermedio-avanzado certificado por la AACI (Asociación Argentina de Cultura Inglesa). Estudiante de 1er año de la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional y de desarrollo web Front-End.</p>
         </div>
     </section>
     
-    <section class="contacto">
+    <section class="contacto" id="contacto">
         <div class="contacto-form">
             <h3>Contacto</h3>
             <p>Ponete en contacto con nosotros</p>
@@ -176,20 +157,12 @@
         </div>
     </section>
 
-    <section class="cotizar">
+    <section class="cotizar" id="cotizar">
         <div class="cotizar-info">
             <h3>Cotizar estadia</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Corrupti laboriosam reiciendis magni culpa vitae, 
-                provident aliquid natus. Nulla, laboriosam obcaecati quam, 
-                itaque, sapiente expedita corrupti tenetur sunt doloremque 
-                officiis dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Corrupti laboriosam reiciendis magni culpa vitae, 
-                provident aliquid natus. Nulla, laboriosam obcaecati quam, 
-                itaque, sapiente expedita corrupti tenetur sunt doloremque 
-                officiis dignissimos</p>
+            <p>Nuestro hotel es accesible por diverosos medios de transporte como: auto, tren e incluso avión. Completá los datos y hace formal tu reserva, nosotros te contactaremos para contarte la disponibilidad en esos días.</p>
             <div class="cotizar-btn estadia-cotizar">
-                <p>Reservar</p>
+                <p><a href="./reservar/index.html">Reservar</a></p>
             </div>
         </div>
     </section>
@@ -199,27 +172,27 @@
             <nav class="nav-footer-1">
                 <h4>Menu</h4>
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Habitaciones</a></li>
-                    <li><a href="">Informacion personal</a></li>
-                    <li><a href="">Contacto</a></li>
-                    <li><a href="">Cotizar</a></li>
+                    <li><a href="#header">Inicio</a></li>
+                    <li><a href="#habitaciones">Habitaciones</a></li>
+                    <li><a href="#sobre-mi">Informacion personal</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#cotizar">Cotizar</a></li>
                 </ul>
             </nav>
             <nav class="nav-footer-2">
                 <ul>
-                    <li><a href="">Habitacion Suite</a></li>
-                    <li><a href="">Habitacion VIP</a></li>
-                    <li><a href="">Habitacion Premium</a></li>
+                    <li><a href="#normal">Habitacion Suite</a></li>
+                    <li><a href="#vip">Habitacion VIP</a></li>
+                    <li><a href="#premium">Habitacion Premium</a></li>
                 </ul>
             </nav>
             <div class="footer-info">
                 <div class="footer-logo">
                     <p>Hotel De Len</p>
                 </div>
-                <p>Direccion 123 - Provincia - CP1234</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                     Quasi atque impedit commodi necessitatibus sed quaerat.</p>
+                <p>Via Cesare Battisti, 66, 32043 Cortina d’Ampezzo (BL)</p>
+                <p>For info: +39 0436 4246 – For reservations: 800 171190
+                    info@hoteldelen.com</p>
             </div>
             <div class="footer-copy">
                 <h4>Informacion</h4>
